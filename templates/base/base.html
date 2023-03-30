@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volley</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300&display=swap" rel="stylesheet">
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="brand-title">
+            <a href="{% url 'index' %}" class="icon">
+                <img width="90px" src="https://upload.wikimedia.org/wikipedia/en/a/a5/Bvfbulgaria.png"
+                     alt="img1">
+            </a>
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Начално разучаване |</a></li>
+                <li><a href="#">Затвърждаване |</a></li>
+                <li><a href="#">Усъвършенстване</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+{% block content %}
+{% endblock %}
+
+
+
+</body>
+</html>
