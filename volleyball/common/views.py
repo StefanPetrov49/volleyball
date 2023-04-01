@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def index(request):
     return render(request, 'index.html')
+
+def integral_preparation(request):
+    return render(request, 'common/integral-preparation.html')

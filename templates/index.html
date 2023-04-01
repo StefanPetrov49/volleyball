@@ -18,11 +18,11 @@
             <button type="button" class="button-black text" onclick="alert('Hello world!')">Научи повече...</button>
         </div>
         <div class="item">
-            <img class="image-square" src="посрещане%201.png">
+            <img class="image-square" src="{% static 'images/reception-1.png' %}">
         </div>
 
         <div class="item">
-            <img class="image-rectangle" src="">
+            <img class="image-rectangle" src="{% static '/images/serve.jpg' %}">
         </div>
 
         <div class="item item-text">
@@ -37,17 +37,17 @@
                 healthy relationships, and staying focused have been key drivers of success for thousands of years.</h3>
         </div>
         <div class="item">
-            <img class="image-rectangle" src="">
+            <img class="image-rectangle" src="{% static 'images/spike.png' %}">
         </div>
 
         <div class="item">
             <img class="image-rectangle" src="">
         </div>
-
         <div class="item item-text">
             <h1 class="title">Интегрална Подготовка</h1>
             <h3 class="text"> Having the proper mindset, moving outside your comfort zone, developing and maintaining
                 healthy relationships, and staying focused have been key drivers of success for thousands of years.</h3>
+            <a class="button-black text" href="{% url 'integral preparation' %}" >Научи повече...</a>
         </div>
 
         <div class="item item-text">
