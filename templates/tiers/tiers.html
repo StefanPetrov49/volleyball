@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="border-box">
+        <div class="boxes-flex">
+            {% for topic in topics %}
+                <div class="box">
+                <a href="{% url 'show exercise' stage=topic.stage exercise=topic.exercise_name %}"><img src="{{ topic.thumbnail.url }}"></a>
+                    <h2 >{{ topic.exercise_name }}</h2>
+                    {% if topic.description %}
+                        <p>{{ topic.description }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
