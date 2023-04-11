@@ -6,8 +6,8 @@
         <div class="boxes-flex">
             {% for topic in topics %}
                 <div class="box">
-                <a href="{% url 'show exercise' stage=topic.stage exercise=topic.exercise_name %}"><img src="{{ topic.thumbnail.url }}"></a>
-                    <h2 >{{ topic.exercise_name }}</h2>
+                <a href="{% url 'show exercises' stage=topic.stage exercise=topic.exercise_name %}"><img src="{{ topic.thumbnail.url }}"></a>
+                    <h2 >{{ topic.exercise_name|capfirst }}</h2>
                     {% if topic.description %}
                         <p>{{ topic.description }}</p>
                     {% endif %}

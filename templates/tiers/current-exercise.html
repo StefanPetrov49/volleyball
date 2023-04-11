@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="box">
+        <img src="{{ current_exercise.image.url }}">
+        <h2>{{ current_exercise.exercise_name }}</h2>
+        {% if current_exercise.description %}
+            <p>{{ current_exercise.description }}</p>
+        {% endif %}
+    </div>
+
+
+{% endblock %}
+

@@ -6,8 +6,9 @@
         <div class="boxes-flex">
             {% for exercise in exercises %}
                 <div class="box">
-                <a href=""><img src="{{ exercise.image.url }}"></a>
-                    <h2 >{{ exercise.exercise_name }}</h2>
+                <a href="{% url 'show current exercise' stage=exercise.topic.stage exercise=exercise.topic.exercise_name slug=exercise.slug %}">
+                    <img src="{{ exercise.image.url }}"></a>
+                    <h2 >{{ exercise.exercise_name}}</h2>
                     {% if exercise.description %}
                         <p>{{ exercise.description }}</p>
                     {% endif %}

@@ -16,4 +16,4 @@ class TopicNamesAdmin(admin.ModelAdmin):
 
 @admin.register(Exercise)
 class ExerciseAdmin(admin.ModelAdmin):
-    pass
+    prepopulated_fields = {'slug': ('exercise_name',)}

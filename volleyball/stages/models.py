@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+from django.utils.text import slugify
 
 
 # Create your models here.
@@ -59,6 +61,12 @@ class Exercise(models.Model):
         blank=True,
         null=True,
     )
+    slug = models.SlugField(
+        null=False,
+    )
+
+    def get_absolute_url(self):
+        return reverse()
 
     def __str__(self):
         return self.exercise_name
